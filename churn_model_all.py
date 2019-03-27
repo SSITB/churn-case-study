@@ -13,7 +13,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble.partial_dependence import partial_dependence
 from sklearn.ensemble.partial_dependence import plot_partial_dependence
-from sklearn.svm import SVC, LinearSVC
+from sklearn.svm import SVC
 from data_clean import DataSelector
 
 
