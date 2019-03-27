@@ -111,7 +111,7 @@ class DataSelector:
         X.loc[:,'avg_dist']=X['avg_dist'].where(X['avg_dist']>=20,0)
         X.loc[:,'avg_dist_above20miles']=X['avg_dist'].where((X['avg_dist']<20),1)
     
-        #Trips in first 30 days, equal to 1 if 10 or more trips in last 30 days 
+        #Trips in the first 30 days, equal to 1 if 10 or more trips in last 30 days 
         X.loc[:,'trips_in_first_30_days']=X['trips_in_first_30_days'].where(
                                             X['trips_in_first_30_days']>=10,0)
         X.loc[:,'first_30d_10or_more']=X['trips_in_first_30_days'].where(
