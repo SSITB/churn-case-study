@@ -1,3 +1,10 @@
+#All continuous variables in churn case study were displaying extreme skewness. 
+#That did not affect machine learning models, but it did have an effect on the logit model.
+#We therefore split those features into categorical variables for the logit model. 
+#Our final logit not only achieved 76.5% test accuracy score (for comparison, Gradient
+#Boosting Classifier test accuracy score was 78%), but also provided valuable additional 
+#information about the reasons of churn and how it could be stopped/reduced.
+
 import pandas as pd
 import statsmodels.api as sm
 from sklearn.ensemble import GradientBoostingClassifier
@@ -159,11 +166,3 @@ X_train_logit = sm.add_constant(X_train_logit)
 logit = sm.Logit(y_train_logit, X_train_logit)
 logit=logit.fit()
 print(logit.summary())
-
-
-#All continuous variables in churn case study were displaying extreme skewness. 
-#That did not affect machine learning models, but it did have an effect on the logit model.
-#We therefore split those features into categorical variables for the logit model. 
-#Our final logit not only achieved 76.5% test accuracy score (for comparison, Gradient
-#Boosting Classifier test accuracy score was 78%), but also provided valuable additional 
-#information about the reasons of churn and how it could be stopped/reduced.
