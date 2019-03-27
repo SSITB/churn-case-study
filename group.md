@@ -18,7 +18,7 @@ model that minimizes error, but also a model that allows you to interpret the
 factors that contributed to your predictions.
 
 Here is a detailed description of the data:
-
+ 
 - `city`: city this user signed up in phone: primary device for this user
 - `signup_date`: date of account registration; in the form `YYYYMMDD`
 - `last_trip_date`: the last time this user completed a trip; in the form `YYYYMMDD`
